@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>制作自己的网页-制作Tab菜单</title>
+    <title>制作提示框</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <style>
@@ -122,8 +122,72 @@
                 </div>
             </div>
         </section>
+        <!-- 完善tab表单 -->
+        <section class="py-5">
+            <h2 class="text-center">我爱NBA</h2>
+            <div class="container">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a href="#east1" class="nav-link active" data-toggle="tab">东部(East)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#west1" class="nav-link" data-toggle="tab">西部(West)</a>
+                    </li>
+                </ul>
+                <div class="tab-content py-3">
+                    <div id="east1" class="tab-pane active">
+                        <p>冠军到底是谁?</p>
+                    </div>
+                    <div id="west1" class="tab-pane">
+                        <p>肯定是火箭</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 制作提示框 -->
+        <section>
+            <div class="container">
+                <div class="tab-content py-3">
+                    <div id="east2" class="tab-pane active">
+                        <p>2018年东部冠军是
+                            <span class="font-weight-bold text-success" title="火箭东部第一" data-toggle="tooltip" data-placement="top">要命</span>还是
+                            <span class="font-weight-bold text-danger" title="火箭没输" data-toggle="tooltip" data-placement="bottom">其实</span>?不会是小牛吧
+                        </p>
+                    </div>
+                    <div id="west" class="tab-pane">
+                        <p>西部冠军昆丁是勇士了。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
-    <footer></footer>
+    <footer class="text-center text-muted py-4">
+        Copyright @Koma Komavideo.com
+    </footer>
 
 
 
@@ -138,8 +202,17 @@
 
 
     <script src="../other/jquery-3.3.1.min.js"></script>
-    <script src="../other/popper.min.js"></script>
+    <!-- <script src="../other/popper.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
     <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+            'user strict';
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
 </body>
 
 </html>
